@@ -17,8 +17,8 @@ class SongsTest < MiniTest::Test
     assert_equal(Songs, @Song1.class())
   end
 
-def test_songs_added_to_playlist
-assert_equal(1, @Song1.songs_added_to_playlist(@Song1))
-end
+  def test_add_song_to_playlist
+    assert_equal(1, @Song1.add_song_to_playlist(@Song1))
+  end
 
 end

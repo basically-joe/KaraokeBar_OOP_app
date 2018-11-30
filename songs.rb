@@ -8,7 +8,7 @@ class Songs
     @playlist = []
   end
 
-def songs_added_to_playlist(song_title)
+def add_song_to_playlist(song_title)
     total = @playlist << song_title
     return total.length
 end
