@@ -9,4 +9,8 @@ class Guests
     @customer_wallet = customer_wallet
   end
 
+def remove_money_from_wallet(fee)
+  @customer_wallet -= fee
+end
+
 end
