@@ -6,11 +6,11 @@ require_relative("../songs")
 class SongsTest < MiniTest::Test
 
   def setup
-    @Song = Songs.new("Joe")
+    @Song = Songs.new("Blue")
   end
 
-  # def test_guest_class_exists
-  #   assert_equal(Songs, @Song.class())
-  # end
+  def test_song_class_exists
+    assert_equal(Songs, @Song.class())
+  end
 
 end
