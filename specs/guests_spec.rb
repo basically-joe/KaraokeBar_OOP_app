@@ -14,15 +14,23 @@ class GuestsTest < MiniTest::Test
     @guest4 = Guests.new({name: "Sam", fav_song: "Hurt", wallet: 5})
     @guest5 = Guests.new({name: "Alan", fav_song: "Blue", wallet: 100})
 
-    @entry_fee = 10
-  end
+    @mutlitple_guests = ([
+      {name: "Joe", fav_song: "Sonne", wallet: 30},
+      {name: "Jodie", fav_song: "Chasing Cars", wallet: 40},
+      {name: "Kim", fav_song: "Stairway to heaven", wallet: 50},
+      {name: "Sam", fav_song: "Hurt", wallet: 5},
+      {name: "Alan", fav_song: "Blue", wallet: 100}
+      ])
 
-  def test_guest_class_exists
-    assert_equal(Guests, @guest1.class())
-  end
+      @entry_fee = 10
+    end
 
-  def test_remove_money_from_wallet
-    assert_equal(20, @guest1.remove_money_from_wallet(@entry_fee))
-  end
+    def test_guest_class_exists
+      assert_equal(Guests, @guest1.class())
+    end
 
-end
+    def test_remove_money_from_wallet
+      assert_equal(20, @guest1.remove_money_from_wallet(@entry_fee))
+    end
+
+  end
