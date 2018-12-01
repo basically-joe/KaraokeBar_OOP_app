@@ -41,7 +41,7 @@ class KaraokebarTest < MiniTest::Test
         {song_title: "Sonne"}
         ])
 
-        @karaokebar = Karaokebar.new("Karaoke Club", 4)
+        @karaokebar = Karaokebar.new("Karaoke Club", 5)
       end
 
       def test_karaoke_class_exists
@@ -61,7 +61,11 @@ class KaraokebarTest < MiniTest::Test
       end
 
       def test_room_capacity
-        assert_equal(4, @karaokebar.room_capacity())
+        assert_equal(5, @karaokebar.room_capacity())
+      end
+
+      def test_capacity__full
+        assert_equal(true, @karaokebar.capacity__full())
       end
 
     end
