@@ -1,16 +1,14 @@
 class Guests
 
-  attr_reader :name, :favourite_song
-  attr_accessor :customer_wallet
+  attr_accessor :customer_name_fav_song_wallet_hash
 
-  def initialize(name, favourite_song, customer_wallet)
-    @name = name
-    @favourite_song = favourite_song
-    @customer_wallet = customer_wallet
+  def initialize(customer_name_fav_song_wallet_hash)
+    @customer_name_fav_song_wallet_hash = customer_name_fav_song_wallet_hash
+    @multiple_guests = []
   end
 
 def remove_money_from_wallet(fee)
-  @customer_wallet -= fee
+  @customer_name_fav_song_wallet_hash[:wallet] -= fee
 end
 
 end

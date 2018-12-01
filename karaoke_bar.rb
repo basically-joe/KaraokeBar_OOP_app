@@ -10,8 +10,13 @@ class Karaokebar
 
   end
 
-def guest_numbers(guest)
+def add_guest(guest)
   total = @guest_array << guest
+  return total.length
+end
+
+def remove_guest(guest)
+  total = @guest_array.shift
   return total.length
 end
 

@@ -30,10 +30,16 @@ class KaraokebarTest < MiniTest::Test
     assert_equal(Karaokebar, @karaokebar.class())
   end
 
-  def test_guest_numbers
-    @karaokebar.guest_numbers(@guest1)
-    @karaokebar.guest_numbers(@guest2)
-    assert_equal(3, @karaokebar.guest_numbers(@guest3))
+  def test_add_guest
+    @karaokebar.add_guest(@guest1)
+    @karaokebar.add_guest(@guest2)
+    assert_equal(3, @karaokebar.add_guest(@guest3))
+  end
+
+  def test_remove_guest
+    @karaokebar.add_guest(@guest1[0])
+    @karaokebar.add_guest(@guest2[0])
+    assert_equal(1, @karaokebar.remove_guest(@guest2[0]))
   end
 
 end

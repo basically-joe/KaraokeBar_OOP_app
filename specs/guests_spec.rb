@@ -8,12 +8,12 @@ require_relative("../songs")
 class GuestsTest < MiniTest::Test
 
   def setup
-    @guest1 = Guests.new("Joe", "Sonne", 30)
-    @guest2 = Guests.new("Jodie", "Chasing Cars", 40)
-    @guest3 = Guests.new("Kim", "Stairway to heaven", 50)
-    @guest4 = Guests.new("Sam", "Hurt", 5)
-    @guest5 = Guests.new("Alan", "Blue", 100)
-    
+    @guest1 = Guests.new({name: "Joe", fav_song: "Sonne", wallet: 30})
+    @guest2 = Guests.new({name: "Jodie", fav_song: "Chasing Cars", wallet: 40})
+    @guest3 = Guests.new({name: "Kim", fav_song: "Stairway to heaven", wallet: 50})
+    @guest4 = Guests.new({name: "Sam", fav_song: "Hurt", wallet: 5})
+    @guest5 = Guests.new({name: "Alan", fav_song: "Blue", wallet: 100})
+
     @entry_fee = 10
   end
 
