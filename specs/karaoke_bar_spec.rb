@@ -31,6 +31,7 @@ class KaraokebarTest < MiniTest::Test
       @Song3 = Songs.new({song_title: "Chasing Cars"})
       @Song4 = Songs.new({song_title: "Hurt"})
       @Song5 = Songs.new({song_title: "Sonne"})
+      @Song6 = Songs.new({song_title: "Bohemian Rhapsody"})
 
       @playlist = ([
         {song_title: "Blue"},
@@ -53,6 +54,10 @@ class KaraokebarTest < MiniTest::Test
 
       def test_remove_guest__no_money
         assert_equal(4, @karaokebar.remove_guest__no_money(@mutlitple_guests))
+      end
+
+      def test_add_song_to_room
+        assert_equal(6, @karaokebar.add_song_to_room(@playlist, @Song6))
       end
 
     end
