@@ -48,9 +48,7 @@ class KaraokebarTest < MiniTest::Test
       end
 
       def test_add_guest
-        @karaokebar.add_guest(@guest1)
-        @karaokebar.add_guest(@guest2)
-        assert_equal(3, @karaokebar.add_guest(@guest3))
+        assert_equal(6, @karaokebar.add_guest(@mutlitple_guests, @guest3))
       end
 
       def test_remove_guest__no_money
