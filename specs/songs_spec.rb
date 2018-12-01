@@ -6,19 +6,27 @@ require_relative("../songs")
 class SongsTest < MiniTest::Test
 
   def setup
-    @Song1 = Songs.new("Blue")
-    @Song2 = Songs.new("Stairway to heaven")
-    @Song3 = Songs.new("Chasing Cars")
-    @Song4 = Songs.new("Hurt")
-    @Song5 = Songs.new("Sonne")
-  end
+    @Song1 = Songs.new({song_title: "Blue"})
+    @Song2 = Songs.new({song_title: "Stairway to heaven"})
+    @Song3 = Songs.new({song_title: "Chasing Cars"})
+    @Song4 = Songs.new({song_title: "Hurt"})
+    @Song5 = Songs.new({song_title: "Sonne"})
 
-  def test_song_class_exists
-    assert_equal(Songs, @Song1.class())
-  end
+    @playlist = ([
+      {song_title: "Blue"},
+      {song_title: "Stairway to heaven"},
+      {song_title: "Chasing Cars"},
+      {song_title: "Hurt"},
+      {song_title: "Sonne"}
+      ])
+    end
 
-  def test_add_song_to_playlist
-    assert_equal(1, @Song1.add_song_to_playlist(@Song1))
-  end
+    def test_song_class_exists
+      assert_equal(Songs, @Song1.class())
+    end
 
-end
+    def test_song_in_playlist__true
+      assert_equal(true, @Song5.song_in_playlist__true(@playlist))
+    end
+
+  end

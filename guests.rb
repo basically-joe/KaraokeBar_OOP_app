@@ -4,7 +4,6 @@ class Guests
 
   def initialize(customer_name_fav_song_wallet_hash)
     @customer_name_fav_song_wallet_hash = customer_name_fav_song_wallet_hash
-    @multiple_guests = []
   end
 
 def remove_money_from_wallet(fee)
