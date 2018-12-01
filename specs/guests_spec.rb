@@ -18,7 +18,7 @@ class GuestsTest < MiniTest::Test
       {name: "Joe", fav_song: "Sonne", wallet: 30},
       {name: "Jodie", fav_song: "Chasing Cars", wallet: 40},
       {name: "Kim", fav_song: "Stairway to heaven", wallet: 50},
-      {name: "Sam", fav_song: "Hurt", wallet: 5},
+      {name: "Sam", fav_song: "Hurt", wallet: 0},
       {name: "Alan", fav_song: "Blue", wallet: 100}
       ])
 

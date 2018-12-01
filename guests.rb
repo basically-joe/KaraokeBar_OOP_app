@@ -14,4 +14,13 @@ def guest_count(guests)
   p guests.length
 end
 
+def remove_guest(guests)
+total = guests.delete_if { |guest| guest[:wallet] == 0 }
+p total.length
+end
+
+# def find_guest_with_no_money
+#   guest_with_no_money = guests.find_all { |guest| guest[:wallet] == 0 }
+# end
+
 end
