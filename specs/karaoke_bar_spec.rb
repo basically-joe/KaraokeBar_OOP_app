@@ -60,4 +60,8 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(6, @karaokebar.add_song_to_room(@playlist, @Song6))
       end
 
+      def test_room_capacity
+        assert_equal(4, @karaokebar.room_capacity())
+      end
+
     end
