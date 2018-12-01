@@ -29,4 +29,8 @@ class SongsTest < MiniTest::Test
       assert_equal(true, @Song5.song_in_playlist__true(@playlist))
     end
 
+    def test_playlist_count
+      assert_equal(5, @Song5.playlist_count(@playlist))
+    end
+
   end

@@ -7,7 +7,11 @@ class Songs
   end
 
   def song_in_playlist__true(songs)
-    p songs.any? { |song| song[:song_title] == "Sonne" }
+    p songs.any? { |song| song[:song_title] == "Sonne"}
+  end
+
+  def playlist_count(playlist)
+    return playlist.length
   end
 
 end
