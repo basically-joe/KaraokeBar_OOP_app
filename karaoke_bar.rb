@@ -15,9 +15,9 @@ def add_guest(guest)
   return total.length
 end
 
-def remove_guest(guest)
-  total = @guest_array.shift
-  return total.length
+def remove_guest__no_money(guests)
+  total = guests.delete_if { |guest| guest[:wallet] == 0 }
+  p total.length
 end
 
 end
