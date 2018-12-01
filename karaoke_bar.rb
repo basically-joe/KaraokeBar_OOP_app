@@ -23,4 +23,11 @@ class Karaokebar
     new_playlist.length
   end
 
+  def room_has_capacity(room_guests, new_customer)
+new_guest_numbers = room_guests << new_customer
+if @room_capacity >= new_guest_numbers.length
+  return true
+end
+  end
+
 end

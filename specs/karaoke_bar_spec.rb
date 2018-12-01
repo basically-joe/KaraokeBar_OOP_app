@@ -16,7 +16,7 @@ class KaraokebarTest < MiniTest::Test
     @guest5 = Guests.new({name: "Alan", fav_song: "Blue", wallet: 100})
     @guest6 = Guests.new({name: "Steven", fav_song: "Promises", wallet: 100})
 
-    @mutlitple_guests = ([
+    @mutlitple_guests__room = ([
       {name: "Joe", fav_song: "Sonne", wallet: 30},
       {name: "Jodie", fav_song: "Chasing Cars", wallet: 40},
       {name: "Kim", fav_song: "Stairway to heaven", wallet: 50},
@@ -41,7 +41,7 @@ class KaraokebarTest < MiniTest::Test
         {song_title: "Sonne"}
         ])
 
-        @karaokebar = Karaokebar.new("Karaoke Club", 5)
+        @karaokebar = Karaokebar.new("Karaoke Club", 6)
       end
 
       def test_karaoke_class_exists
@@ -49,11 +49,11 @@ class KaraokebarTest < MiniTest::Test
       end
 
       def test_add_guest
-        assert_equal(6, @karaokebar.add_guest(@mutlitple_guests, @guest3))
+        assert_equal(6, @karaokebar.add_guest(@mutlitple_guests__room, @guest3))
       end
 
       def test_remove_guest__no_money
-        assert_equal(4, @karaokebar.remove_guest__no_money(@mutlitple_guests))
+        assert_equal(4, @karaokebar.remove_guest__no_money(@mutlitple_guests__room))
       end
 
       def test_add_song_to_room
@@ -61,11 +61,11 @@ class KaraokebarTest < MiniTest::Test
       end
 
       def test_room_capacity
-        assert_equal(5, @karaokebar.room_capacity())
+        assert_equal(6, @karaokebar.room_capacity())
       end
 
-      def test_capacity__full
-        assert_equal(true, @karaokebar.capacity__full())
+      def test_room_has_capacity
+        assert_equal(true, @karaokebar.room_has_capacity(@mutlitple_guests__room, @guest6))
       end
 
     end
