@@ -37,4 +37,8 @@ class GuestsTest < MiniTest::Test
       assert_equal(5, @guest1.guest_count(@mutlitple_guests))
     end
 
+    def test_remove_guest
+      assert_equal(4, @guest1.remove_guest(@mutlitple_guests))
+    end
+
   end
