@@ -33,4 +33,8 @@ class GuestsTest < MiniTest::Test
       assert_equal(20, @guest1.remove_money_from_wallet(@entry_fee))
     end
 
+    def test_guest_count
+      assert_equal(5, @guest1.guest_count(@mutlitple_guests))
+    end
+
   end
