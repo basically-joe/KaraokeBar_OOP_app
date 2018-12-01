@@ -13,6 +13,7 @@ class GuestsTest < MiniTest::Test
     @guest3 = Guests.new({name: "Kim", fav_song: "Stairway to heaven", wallet: 50})
     @guest4 = Guests.new({name: "Sam", fav_song: "Hurt", wallet: 5})
     @guest5 = Guests.new({name: "Alan", fav_song: "Blue", wallet: 100})
+    @guest6 = Guests.new({name: "Steven", fav_song: "Promises", wallet: 100})
 
     @mutlitple_guests = ([
       {name: "Joe", fav_song: "Sonne", wallet: 30},
@@ -37,8 +38,12 @@ class GuestsTest < MiniTest::Test
       assert_equal(5, @guest1.guest_count(@mutlitple_guests))
     end
 
-    def test_remove_guest
-      assert_equal(4, @guest1.remove_guest(@mutlitple_guests))
+    def test_remove_guest__no_money
+      assert_equal(4, @guest1.remove_guest__no_money(@mutlitple_guests))
+    end
+
+    def test_add_guest
+      assert_equal(6, @guest6.add_guest(@mutlitple_guests, @guest6))
     end
 
   end
