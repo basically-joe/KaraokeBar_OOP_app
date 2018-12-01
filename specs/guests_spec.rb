@@ -3,6 +3,7 @@ require("minitest/autorun")
 
 require_relative("../guests")
 require_relative("../songs")
+equire_relative("../karaoke_bar")
 
 
 class GuestsTest < MiniTest::Test
