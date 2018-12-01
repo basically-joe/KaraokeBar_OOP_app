@@ -41,7 +41,7 @@ class KaraokebarTest < MiniTest::Test
         {song_title: "Sonne"}
         ])
 
-        @karaokebar = Karaokebar.new("Karaoke Club")
+        @karaokebar = Karaokebar.new("Karaoke Club", 4)
       end
 
       def test_karaoke_class_exists
