@@ -70,7 +70,7 @@ class KaraokebarTest < MiniTest::Test
       end
 
       def test_customer_fav_song__wooh
-        assert_equal("Wooh", @karaokebar.customer_fav_song__wooh(@playlist, @guest1))
+        assert_equal("Wooh, they've got my fave song!", @karaokebar.customer_fav_song__wooh(@playlist, @guest1))
       end
 
     end

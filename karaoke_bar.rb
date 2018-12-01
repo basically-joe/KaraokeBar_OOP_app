@@ -32,4 +32,10 @@ class Karaokebar
     end
   end
 
+  def customer_fav_song__wooh(songs, guests)
+    if songs.any? { |song| song[:song_title] == "Sonne"}
+      return "Wooh, they've got my fave song!"
+    end
+  end
+
 end
