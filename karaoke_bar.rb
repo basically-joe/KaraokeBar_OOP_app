@@ -19,6 +19,14 @@ class Karaokebar
     total.length
   end
 
+  def remove_guest_from_room
+    remove1 = @karaoke_room_guests.pop
+    return @karaoke_room_guests
+  end
+
+
+
+
 
   def add_guest(guests, new_customer)
     total = guests << new_customer

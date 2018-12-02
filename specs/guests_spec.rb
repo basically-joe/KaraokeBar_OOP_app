@@ -2,8 +2,6 @@ require("minitest/rg")
 require("minitest/autorun")
 
 require_relative("../guests")
-require_relative("../songs")
-equire_relative("../karaoke_bar")
 
 
 class GuestsTest < MiniTest::Test
@@ -33,18 +31,6 @@ class GuestsTest < MiniTest::Test
 
     def test_remove_money_from_wallet
       assert_equal(20, @guest1.remove_money_from_wallet(@entry_fee))
-    end
-
-    def test_guest_count
-      assert_equal(5, @guest1.guest_count(@mutlitple_guests))
-    end
-
-    def test_remove_guest__no_money
-      assert_equal(4, @guest1.remove_guest__no_money(@mutlitple_guests))
-    end
-
-    def test_add_guest
-      assert_equal(6, @guest6.add_guest(@mutlitple_guests, @guest6))
     end
 
   end

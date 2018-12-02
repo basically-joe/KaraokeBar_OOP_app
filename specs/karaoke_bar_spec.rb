@@ -12,7 +12,7 @@ class KaraokebarTest < MiniTest::Test
     @guest1 = Guests.new({name: "Joe", fav_song: "Sonne", wallet: 30})
     @guest2 = Guests.new({name: "Jodie", fav_song: "Chasing Cars", wallet: 40})
     @guest3 = Guests.new({name: "Kim", fav_song: "Stairway to heaven", wallet: 50})
-    @guest4 = Guests.new({name: "Sam", fav_song: "Hurt", wallet: 5})
+    @guest4 = Guests.new({name: "Sam", fav_song: "Hurt", wallet: 0})
     @guest5 = Guests.new({name: "Alan", fav_song: "Blue", wallet: 100})
     @guest6 = Guests.new({name: "Steven", fav_song: "Promises", wallet: 100})
 
@@ -56,6 +56,13 @@ class KaraokebarTest < MiniTest::Test
       def test_add_guest_to_room
         assert_equal(1, @karaokebar.add_guest_to_room(@guest2))
       end
+
+      def test_remove_guest_from_room
+        @karaokebar.add_guest_to_room(@guest1)
+        @karaokebar.add_guest_to_room(@guest4)
+        assert_equal(1, @karaokebar.remove_guest_from_room())
+      end
+
 
 
 
