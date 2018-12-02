@@ -53,8 +53,8 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(0, @karaokebar.count_guests_in_room())
       end
 
-      def add_guest_to_room
-
+      def test_add_guest_to_room
+        assert_equal(1, @karaokebar.add_guest_to_room(@guest2))
       end
 
 

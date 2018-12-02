@@ -14,6 +14,12 @@ class Karaokebar
     @karaoke_room_guests.length
   end
 
+  def add_guest_to_room(guest)
+    total = @karaoke_room_guests << guest
+    total.length
+  end
+
+
   def add_guest(guests, new_customer)
     total = guests << new_customer
     total.length
