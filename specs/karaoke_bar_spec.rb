@@ -86,8 +86,4 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(true, @karaokebar.room_has_reached_capacity())
       end
 
-      def test_customer_fav_song__wooh
-        assert_equal("Wooh, they've got my fave song!", @karaokebar.customer_fav_song__wooh(@playlist, @guest1))
-      end
-
     end
