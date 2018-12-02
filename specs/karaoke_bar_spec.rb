@@ -41,7 +41,7 @@ class KaraokebarTest < MiniTest::Test
         {song_title: "Sonne"}
         ])
 
-        @karaokebar = Karaokebar.new("Karaoke Club", 6)
+        @karaokebar = Karaokebar.new("Karaoke Club", 5)
         @karaokebar1 = Karaokebar.new("Silent disco", 5)
       end
 
@@ -73,16 +73,17 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(1, @karaokebar.remove_song_from_room_playlist())
       end
 
-
-
-
-
       def test_room_capacity
-        assert_equal(6, @karaokebar.room_capacity())
+        assert_equal(5, @karaokebar.room_capacity())
       end
 
-      def test_room_has_capacity
-        assert_equal(6, @karaokebar.room_has_capacity(@mutlitple_guests__room, @guest6))
+      def test_room_has_reached_capacity
+        @karaokebar.add_guest_to_room(@guest1)
+        @karaokebar.add_guest_to_room(@guest2)
+        @karaokebar.add_guest_to_room(@guest3)
+        @karaokebar.add_guest_to_room(@guest4)
+        @karaokebar.add_guest_to_room(@guest5)
+        assert_equal(true, @karaokebar.room_has_reached_capacity())
       end
 
       def test_customer_fav_song__wooh

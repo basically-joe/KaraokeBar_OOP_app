@@ -30,20 +30,14 @@ class Karaokebar
     total.length
   end
 
-def remove_song_from_room_playlist
-  remove1 = @karaoke_room_playlist.pop
-  return @karaoke_room_playlist.length
-end
+  def remove_song_from_room_playlist
+    remove1 = @karaoke_room_playlist.pop
+    return @karaoke_room_playlist.length
+  end
 
-
-
-
-  def room_has_capacity(room_guests, new_customer)
-    new_guest_numbers = room_guests << new_customer
-    if @room_capacity >= new_guest_numbers.length
-      return new_guest_numbers.length
-    else
-      return room_guests.length
+  def room_has_reached_capacity()
+    if @room_capacity >= @karaoke_room_guests.length
+      return true
     end
   end
 
