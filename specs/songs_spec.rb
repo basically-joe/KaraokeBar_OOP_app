@@ -11,6 +11,7 @@ class SongsTest < MiniTest::Test
     @Song3 = Songs.new({song_title: "Chasing Cars"})
     @Song4 = Songs.new({song_title: "Hurt"})
     @Song5 = Songs.new({song_title: "Sonne"})
+    @Song6 = Songs.new({song_title: "Bohemian Rhapsody"})
 
     @playlist = ([
       {song_title: "Blue"},

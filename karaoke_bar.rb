@@ -1,11 +1,17 @@
 class Karaokebar
 
   attr_reader :bar_name, :room_capacity
+  attr_accessor :karaoke_room_guests
 
   def initialize(bar_name, room_capacity)
     @bar_name = bar_name
+    @karaoke_room_guests = []
     @room_capacity = room_capacity
 
+  end
+
+  def count_guests_in_room
+    @karaoke_room_guests.length
   end
 
   def add_guest(guests, new_customer)
