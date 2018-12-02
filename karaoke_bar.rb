@@ -36,8 +36,10 @@ class Karaokebar
   end
 
   def room_has_reached_capacity()
-    if @room_capacity >= @karaoke_room_guests.length
+    if @karaoke_room_guests.length >= @room_capacity
       return true
+    else
+      false
     end
   end
 
