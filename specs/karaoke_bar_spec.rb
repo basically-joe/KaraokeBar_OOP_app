@@ -63,17 +63,13 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(1, @karaokebar.remove_guest_from_room())
       end
 
-
-
-
-
-      def test_add_guest
-        assert_equal(6, @karaokebar.add_guest(@mutlitple_guests__room, @guest3))
+      def test_add_song_to_room_playlist
+        assert_equal(1, @karaokebar.add_song_to_room_playlist(@Song1))
       end
 
-      def test_remove_guest__no_money
-        assert_equal(4, @karaokebar.remove_guest__no_money(@mutlitple_guests__room))
-      end
+      
+
+
 
       def test_add_song_to_room
         assert_equal(6, @karaokebar.add_song_to_room(@playlist, @Song6))
