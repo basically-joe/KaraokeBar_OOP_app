@@ -43,4 +43,12 @@ class Karaokebar
     end
   end
 
+  def guest_trying_to_enter__room_at_capacity(new_guest)
+    if room_has_reached_capacity
+      return count_guests_in_room
+    else
+      add_guest_to_room(new_guest)
+    end
+  end
+
 end

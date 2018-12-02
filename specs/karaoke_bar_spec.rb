@@ -86,4 +86,13 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(true, @karaokebar.room_has_reached_capacity())
       end
 
+      def test_guest_trying_to_enter__room_at_capacity
+        @karaokebar.add_guest_to_room(@guest1)
+        @karaokebar.add_guest_to_room(@guest2)
+        @karaokebar.add_guest_to_room(@guest3)
+        @karaokebar.add_guest_to_room(@guest4)
+        @karaokebar.add_guest_to_room(@guest5)
+        assert_equal(5, @karaokebar.guest_trying_to_enter__room_at_capacity(@guest6))
+      end
+
     end
