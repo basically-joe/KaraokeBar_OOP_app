@@ -102,4 +102,8 @@ class KaraokebarTest < MiniTest::Test
         assert_equal(4, @karaokebar.guest_trying_to_enter__room_at_capacity(@guest6))
       end
 
+      def method_name
+
+      end
+
     end

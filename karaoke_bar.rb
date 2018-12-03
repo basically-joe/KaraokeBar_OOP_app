@@ -1,13 +1,15 @@
 class Karaokebar
 
-  attr_reader :bar_name, :room_capacity
-  attr_accessor :karaoke_room_guests, :karaoke_room_playlist
+  attr_reader :bar_name, :room_capacity, :entry_fee
+  attr_accessor :karaoke_room_guests, :karaoke_room_playlist, :customer_cash_check
 
   def initialize(bar_name, room_capacity)
     @bar_name = bar_name
     @karaoke_room_guests = []
     @karaoke_room_playlist = []
     @room_capacity = room_capacity
+    @entry_fee = 10
+    @customer_cash_check = []
 
   end
 

@@ -1,6 +1,11 @@
 class Guests
 
+
   attr_accessor :customer_name_fav_song_wallet_hash
+
+  def money_in_wallet()
+    @customer_name_fav_song_wallet_hash[:wallet]
+  end
 
   def initialize(customer_name_fav_song_wallet_hash)
     @customer_name_fav_song_wallet_hash = customer_name_fav_song_wallet_hash

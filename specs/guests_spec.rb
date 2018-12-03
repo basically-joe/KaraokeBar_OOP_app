@@ -22,11 +22,16 @@ class GuestsTest < MiniTest::Test
       {name: "Alan", fav_song: "Blue", wallet: 100}
       ])
 
-      @entry_fee = 10
+      @entry_fee = (10)
+
     end
 
     def test_guest_class_exists
       assert_equal(Guests, @guest1.class())
+    end
+
+    def test_money_in_wallet
+      assert_equal(30, @guest1.money_in_wallet())
     end
 
     def test_remove_money_from_wallet
