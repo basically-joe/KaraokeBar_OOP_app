@@ -57,7 +57,7 @@ class Karaokebar
     if new_guest.remove_money_from_wallet__customer_afford_fee_check(@entry_fee)
       return add_guest_to_room(new_guest)
     else
-      return
+      return "You don't have enough cash to enter!"
     end
   end
 
