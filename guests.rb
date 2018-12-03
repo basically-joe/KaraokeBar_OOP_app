@@ -15,11 +15,11 @@ class Guests
     @customer_name_fav_song_wallet_hash[:wallet] -= fee
   end
 
-  def remove_money_from_wallet__customer_afford_item_check(fee)
+  def remove_money_from_wallet__customer_afford_fee_check(fee)
     if @customer_name_fav_song_wallet_hash[:wallet] >= fee
-      remove_money_from_wallet(fee)
+      return true
     else
-      return "You don't have enough cash to enter"
+      return false
     end
   end
 

@@ -53,11 +53,11 @@ class Karaokebar
     end
   end
 
-  def customer_entering__enough_money(new_guest)
-    if new_guest.remove_money_from_wallet__customer_afford_item_check(@entry_fee)
-      add_guest_to_room(new_guest)
+  def customer_entering_money_check(new_guest)
+    if new_guest.remove_money_from_wallet__customer_afford_fee_check(@entry_fee)
+      return add_guest_to_room(new_guest)
     else
-      return "Sorry, if you can't afford the entry fee, you can't enter."
+      return
     end
   end
 

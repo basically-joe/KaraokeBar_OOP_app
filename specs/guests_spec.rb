@@ -39,11 +39,11 @@ class GuestsTest < MiniTest::Test
     end
 
     def test_remove_money_from_wallet__customer_can_afford_item
-      assert_equal(20, @guest1.remove_money_from_wallet__customer_afford_item_check(10))
+      assert_equal(true, @guest1.remove_money_from_wallet__customer_afford_fee_check(10))
     end
 
     def test_remove_money_from_wallet__customer_not_afford_item
-      assert_equal("You don't have enough cash to enter", @guest4.remove_money_from_wallet__customer_afford_item_check(10))
+      assert_equal(false, @guest4.remove_money_from_wallet__customer_afford_fee_check(10))
     end
 
   end

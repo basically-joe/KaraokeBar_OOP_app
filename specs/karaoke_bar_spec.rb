@@ -105,7 +105,12 @@ class KaraokebarTest < MiniTest::Test
       def test_customer_entering__enough_money
         @karaokebar.add_guest_to_room(@guest1)
         @karaokebar.add_guest_to_room(@guest2)
-        assert_equal(3, @karaokebar.customer_entering__enough_money(@guest6))
+        assert_equal(3, @karaokebar.customer_entering_money_check(@guest6))
       end
 
+      def test_customer_entering__insufficient_money
+        @karaokebar.add_guest_to_room(@guest1)
+        @karaokebar.add_guest_to_room(@guest2)
+        assert_equal("You don't have enough cash to enter", @karaokebar.customer_entering_money_check(@guest4))
+      end
     end
