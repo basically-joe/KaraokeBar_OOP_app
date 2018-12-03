@@ -23,4 +23,10 @@ class Guests
     end
   end
 
+  def customers_fave_song__check(song)
+    if @customer_name_fav_song_wallet_hash[:fav_song] == song
+      return true
+    end
+  end
+
 end

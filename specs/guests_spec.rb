@@ -46,4 +46,8 @@ class GuestsTest < MiniTest::Test
       assert_equal(false, @guest4.remove_money_from_wallet__customer_afford_fee_check(10))
     end
 
+    def test_customers_fave_song__present
+        assert_equal(true, @guest4.customers_fave_song__check("Hurt"))
+    end
+
   end
