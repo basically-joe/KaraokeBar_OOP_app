@@ -15,7 +15,7 @@ class Guests
     @customer_name_fav_song_wallet_hash[:wallet] -= fee
   end
 
-  def remove_money_from_wallet__customer_can_afford_item(fee)
+  def remove_money_from_wallet__customer_afford_item_check(fee)
     if @customer_name_fav_song_wallet_hash[:wallet] >= fee
       remove_money_from_wallet(fee)
     else
